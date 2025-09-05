@@ -23,6 +23,7 @@ const Navbar = () => (
   </nav>
 );
 
+
 // Simple counter hook
 const useCounter = (end, duration = 2000, shouldStart = false) => {
   const [count, setCount] = useState(0);
