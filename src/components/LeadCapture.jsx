@@ -19,7 +19,7 @@ import {
 import emailjs from "@emailjs/browser";
 import { Toaster, toast } from "react-hot-toast";
 
-// Simplified Custom Select fn.
+// Simplified Custom Select fn
 const CustomSelect = ({ options, placeholder, value, onChange, icon: Icon }) => {
   const [isOpen, setIsOpen] = useState(false);
 
