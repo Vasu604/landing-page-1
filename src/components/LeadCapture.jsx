@@ -144,6 +144,8 @@ const LeadCaptureForm = () => {
     'Paid Advertising Campaigns', 
     'Customized Strategy Plans',
     'Google Ads & Search Campaigns',
+    'Website Design & Development',
+    'Project Management Services',
     'Search Engine Optimization (SEO)',
     'Video Shoot & Production',
     'Complete Digital Marketing Package'
