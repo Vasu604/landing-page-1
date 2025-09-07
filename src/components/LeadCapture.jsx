@@ -138,7 +138,7 @@ const TrustIndicators = () => {
 const LeadCaptureForm = () => {
   const [formData, setFormData] = useState({ service: '', budget: '', name: '', email: '', mobile: '' });
   const [isLoading, setIsLoading] = useState(false);
-
+  // added
   const serviceOptions = [
     'Social Media Marketing',
     'Paid Advertising Campaigns', 

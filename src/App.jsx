@@ -9,7 +9,7 @@ import Closing from './components/Closing';
 import Footer from './components/Footer';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-// App
+// App update
 const App = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [currentSection, setCurrentSection] = useState(0);
