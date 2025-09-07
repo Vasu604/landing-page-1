@@ -1,0 +1,29 @@
+name: CI - Build and Test
+
+on:
+  push:
+    branches: [ "main" ]   # run when code is pushed to main branch
+  pull_request:
+    branches: [ "main" ]   # also run on PRs
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18   # use Node 18 (Vite works well here)
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Run tests
+        run: npm test
