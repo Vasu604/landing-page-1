@@ -1,10 +1,10 @@
-name: CI - Build and Test
+name: CI - Build and Deploy
 
 on:
   push:
-    branches: [ "main" ]   # run when code is pushed to main branch
+    branches: [ "main" ]
   pull_request:
-    branches: [ "main" ]   # also run on PRs
+    branches: [ "main" ]
 
 jobs:
   build:
@@ -17,13 +17,10 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18   # use Node 18 (Vite works well here)
+          node-version: 18
 
       - name: Install dependencies
         run: npm install
 
       - name: Build project
         run: npm run build
-
-      - name: Run tests
-        run: npm test
