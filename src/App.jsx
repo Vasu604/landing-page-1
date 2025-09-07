@@ -67,6 +67,7 @@ const App = () => {
   return (
     <Router>
       <Routes>
+        <Route path='/' element={<Herosection />} />
         <Route path="/LeadCaptureForm" element={<LeadCaptureForm />} />
       </Routes>
 
@@ -74,9 +75,8 @@ const App = () => {
       <div className="relative overflow-hidden">
         {/* Loading Animation */}
         <div
-          className={`fixed inset-0 z-50 bg-gray-900 flex items-center justify-center transition-all duration-1000 ${
-            isLoaded ? 'opacity-0 pointer-events-none' : 'opacity-100'
-          }`}
+          className={`fixed inset-0 z-50 bg-gray-900 flex items-center justify-center transition-all duration-1000 ${isLoaded ? 'opacity-0 pointer-events-none' : 'opacity-100'
+            }`}
         >
           <div className="text-center">
             <div className="w-16 h-16 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin mb-4 mx-auto"></div>
@@ -100,11 +100,10 @@ const App = () => {
             <button
               key={index}
               onClick={() => scrollToSection(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 hover:scale-125 ${
-                currentSection === index
+              className={`w-3 h-3 rounded-full transition-all duration-300 hover:scale-125 ${currentSection === index
                   ? 'bg-gradient-to-r from-cyan-400 to-purple-500 shadow-lg shadow-cyan-400/50'
                   : 'bg-white/30 hover:bg-white/50'
-              }`}
+                }`}
               aria-label={`Go to section ${index + 1}`}
             />
           ))}
@@ -112,61 +111,54 @@ const App = () => {
 
         {/* Main Content with Staggered Animations */}
         <main
-          className={`transition-all duration-1000 ${
-            isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
+          className={`transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
         >
           <section
             data-section="0"
-            className={`transition-all duration-1000 delay-200 ${
-              isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
-            }`}
+            className={`transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+              }`}
           >
-            <Herosection />
+            {/* <Herosection /> */}
           </section>
 
           {/* About Section */}
           <section
             data-section="1"
-            className={`transition-all duration-1000 delay-400 ${
-              isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
-            }`}
+            className={`transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+              }`}
           >
             <AboutUs />
           </section>
 
           <section
             data-section="2"
-            className={`transition-all duration-1000 delay-400 ${
-              isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
-            }`}
+            className={`transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+              }`}
           >
             <ServicesPage />
           </section>
 
           <section
             data-section="3"
-            className={`transition-all duration-1000 delay-400 ${
-              isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
-            }`}
+            className={`transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+              }`}
           >
             <LeadCaptureForm />
           </section>
 
           <section
             data-section="4"
-            className={`transition-all duration-1000 delay-400 ${
-              isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
-            }`}
+            className={`transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+              }`}
           >
             <BookCallSection />
           </section>
 
           <section
             data-section="5"
-            className={`transition-all duration-1000 delay-400 ${
-              isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
-            }`}
+            className={`transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+              }`}
           >
             <WhyChooseNotedAd />
             <Closing />
@@ -177,11 +169,10 @@ const App = () => {
         {/* Floating Action Button */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className={`fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-40 flex items-center justify-center group ${
-            scrollProgress > 20
+          className={`fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-40 flex items-center justify-center group ${scrollProgress > 20
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-10 pointer-events-none'
-          }`}
+            }`}
           aria-label="Back to top"
         >
           <svg
